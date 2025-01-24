@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - O-BAY</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li id="welcomeMessage" class="welcome-message"></li>
+            <li id="addProductNav" class="hidden">
+                <button id="addProductBtn" class="rg-btn">Add Product</button>
+            </li>
+            <li class="nav-icon-container user-only">
+                <button id="viewCartBtn" class="icon-button">
+                    <img src="/assets/cart.png" alt="View Cart" class="nav-icon" />
+                    <span id="cartItemCount" class="cart-badge">0</span>
+                </button>
+            </li>
+            <li class="nav-icon-container">
+                <a href="index.html" id="logoutBtn">
+                    <img src="/assets/logout.png" alt="Logout" class="nav-icon" />
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="products-page"></div>
+    <!-- Components -->
+    <div id="components">
+        <div id="popups"></div>
+        <div id="toast-container"></div>
+    </div>
+    <script type="module" src="/js/product.js"></script>
+    <script>
+        (async () => {
+            document.getElementById('popups').innerHTML = await (await fetch('./components/Popups.html')).text();
+        })();
+    </script>
+</body>
+</html>

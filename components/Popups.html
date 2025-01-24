@@ -1,0 +1,93 @@
+<div class="popup" id="loginPopup">
+    <div class="popup-content">
+        <h2>Welcome Back. Please input details to proceed.</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit" class="lg-btn">Login</button>
+            <div id="option2-lg">
+                <button type="button" id="registerBtn" class="rg-btn">Create Account</button>
+                <button type="button" id="adminLoginBtn">Login as Admin</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="regPopup">
+    <div class="popup-content">
+        <h2>Input details to create an account.</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="register">Register</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="adminPopup">
+    <div class="popup-content">
+        <h2>Admin Login</h2>
+        <form id="adminForm">
+            <input type="email" id="adminEmail" placeholder="Admin Email" required>
+            <input type="password" id="adminPassword" placeholder="Admin Password" required>
+            <button type="submit" class="admin-push-login">Login</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="productFormPopup">
+    <div class="popup-content">
+        <h2 id="formTitle">Add Product</h2>
+        <form id="productForm">
+            <input type="hidden" id="productId" />
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" placeholder="Product Name" required />
+            <label for="productDescription">Product Description</label>
+            <textarea id="productDescription" placeholder="Product Description" required></textarea>
+            <label for="productPrice">Price</label>
+            <input type="number" id="productPrice" placeholder="Price" required />
+            <label for="productStock">Stock</label>
+            <input type="number" id="productStock" placeholder="Stock" required />
+            <label for="productCategory">Category</label>
+            <input type="text" id="productCategory" placeholder="Category" required />
+            <label for="productImageUrl">Image URL</label>
+            <input type="text" id="productImageUrl" placeholder="Image URL" required />
+            <button type="submit" id="saveProductBtn" class="rg-btn">Save Product</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="productDetailsPopup">
+    <div class="popup-content">
+        <h2 id="productNamePopup">Product Name</h2>
+        <img id="productImagePopup" src="/placeholder.svg" alt="Product Image" />
+        <p id="productDescriptionPopup"></p>
+        <p><strong>Price:</strong> $<span id="productPricePopup"></span></p>
+        <p><strong>Stock:</strong> <span id="productStockPopup"></span></p>
+        <p><strong>Category:</strong> <span id="productCategoryPopup"></span></p>
+
+        <div class="cart-controls user-only">
+            <label for="productQuantity">Quantity:</label>
+            <input id="productQuantity" type="number" min="1" value="1" />
+            <button id="addToCartBtn" class="rg-btn" type="button">Add to Cart</button>
+            <button id="removeFromCartBtn" class="lg-btn hidden" type="button">Remove from Cart</button>
+        </div>
+
+        <div id="adminControls" class="hidden">
+            <button id="updateProductBtn" class="rg-btn">Update Product</button>
+            <button id="deleteProductBtn" class="lg-btn danger">Delete Product</button>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="cartPopup">
+    <div class="popup-content">
+        <h2>Shopping Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">
+            <strong>Total: $</strong><span id="totalAmount">0.00</span>
+        </div>
+        <button id="checkoutBtn" class="rg-btn">Proceed to Checkout</button>
+    </div>
+</div>

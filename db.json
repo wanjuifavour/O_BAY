@@ -1,0 +1,214 @@
+{
+  "admins": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@gmail.com",
+      "password": "Admin12345",
+      "role": "admin"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Smith",
+      "email": "john.smith@email.com",
+      "password": "jsmith2024",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "2",
+      "name": "Sarah Johnson",
+      "email": "sarah.j@email.com",
+      "password": "sarahj2024",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "3",
+      "name": "Michael Chen",
+      "email": "m.chen@email.com",
+      "password": "mchen2024",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "4",
+      "name": "Emma Williams",
+      "email": "emma.w@email.com",
+      "password": "ewill2024",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "5",
+      "name": "David Brown",
+      "email": "david.b@email.com",
+      "password": "dbrown2024",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "6",
+      "name": "Wan",
+      "email": "wan@gmail.com",
+      "password": "wan12345",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "5659",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "33cc",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "05fb",
+      "name": "Favour",
+      "email": "favour@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "bbb0",
+      "name": "Jenniffer",
+      "email": "jenn@gmail.com",
+      "password": "jenn123",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "beac",
+      "name": "Luke Alex",
+      "email": "luke@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "d5f6",
+      "name": "luke peter",
+      "email": "luke@gmail.com",
+      "password": "1234567",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "95f5",
+      "name": "Male User",
+      "email": "user1@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "5916",
+      "name": "Elon",
+      "email": "musk@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "412d",
+      "name": "elon",
+      "email": "musk1@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "2e99",
+      "name": "keya",
+      "email": "keya@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "cart": {}
+    },
+    {
+      "id": "fbf6",
+      "name": "john",
+      "email": "john@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "cart": {}
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_001",
+      "name": "Ultra HD Smart TV",
+      "description": "55-inch 4K Smart LED TV with HDR and built-in streaming apps",
+      "price": 699.99,
+      "stock": 15,
+      "category": "Electronics",
+      "imageUrl": "https://media.istockphoto.com/id/638043774/photo/modern-curved-4k-ultrahd-tv.webp?a=1&b=1&s=612x612&w=0&k=20&c=qaTtJEO2xV8VQltAAMD7qiw9ce52AjmYga85HjOzzlw="
+    },
+    {
+      "id": "prod_002",
+      "name": "Wireless Noise-Canceling Headphones",
+      "description": "Premium bluetooth headphones with active noise cancellation",
+      "price": 199.99,
+      "stock": 70,
+      "category": "Electronics",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": "prod_003",
+      "name": "Professional Chef Knife Set",
+      "description": "8-piece stainless steel kitchen knife set with wooden block",
+      "price": 249.99,
+      "stock": 80,
+      "category": "Kitchen",
+      "imageUrl": "https://images.unsplash.com/photo-1717126763826-77696b14d5ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "prod_004",
+      "name": "Smart Fitness Watch",
+      "description": "Waterproof fitness tracker with heart rate monitor and GPS",
+      "price": 179.99,
+      "stock": 40,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1676554565987-524692127b1a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZpdG5lc3MlMjB3YXRjaHxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": "prod_005",
+      "name": "Robot Vacuum Cleaner",
+      "description": "Smart robot vacuum with app control and automatic charging",
+      "price": 299.99,
+      "stock": 18,
+      "category": "Appliances",
+      "imageUrl": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHJvYm90JTIwdmFjdXVtJTIwY2xlYW5lcnxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": "prod_006",
+      "name": "Portable Bluetooth Speaker",
+      "description": "Waterproof portable speaker with 20-hour battery life",
+      "price": 89.99,
+      "stock": 35,
+      "category": "Electronics",
+      "imageUrl": "https://media.istockphoto.com/id/1199491696/photo/portable-bluetooth-speaker-with-silicone-handle-isolated-on-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=hEJAfGiK9tBFJlg_LM-nv1ZeCIQcytWSj7886xCcVs8="
+    },
+    {
+      "id": "prod_007",
+      "name": "Mobile Phone",
+      "description": "A smart Phone with latest features",
+      "price": 249.99,
+      "stock": 700,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1717126763826-77696b14d5ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ]
+}
