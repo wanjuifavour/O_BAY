@@ -3,6 +3,14 @@ import { showPopup, closePopup } from "./popup.js";
 import { addToCart } from "./cart.js";
 import { showToast } from "./toast.js";
 
+const API_URL = "http://localhost:3000";
+let currentProductId;
+
+const isAdmin = () => {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    return currentUser && currentUser.role === "admin";
+};
+
 export const loadProducts = async () => {
     const products = await fetchProducts();
     displayProducts(products);
@@ -67,12 +75,37 @@ export const viewProduct = async (id) => {
             updateCartUI();
         }
 
-        openPopup(productDetailsPopup);
+        const productDetailsPopup = document.getElementById("productDetailsPopup");
+        if (!productDetailsPopup) {
+            throw new Error("Product details popup not found");
+        }
+
+        showPopup(productDetailsPopup);
     } catch (error) {
         console.error("Error loading product:", error);
         showToast("Failed to load product details. Please try again.", "error");
     }
 }
+
+const checkProductElements = () => {
+    const requiredElements = [
+        'productNamePopup',
+        'productImagePopup',
+        'productDescriptionPopup',
+        'productPricePopup',
+        'productStockPopup',
+        'productCategoryPopup'
+    ];
+
+    return requiredElements.every(elementId => {
+        const element = document.getElementById(elementId);
+        if (!element) {
+            console.error(`Missing required element: ${elementId}`);
+            return false;
+        }
+        return true;
+    });
+};
 
 const setupAddToCartButton = (productId) => {
     const addToCartBtn = document.getElementById("addToCartBtn");
@@ -84,8 +117,20 @@ const setupAddToCartButton = (productId) => {
         });
     }
 };
+const logout = document.getElementById("logoutBtn");
+if (logout) {
+    logout.addEventListener("click", () => {
+        localStorage.removeItem("currentUser");
+        window.location.href = "index.html";
+    });
+}
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    await fetch('./components/Popups.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('popups').innerHTML = html;
+        });
     window.addEventListener("click", (event) => {
         if (event.target.classList.contains("popup")) {
             closePopup();
