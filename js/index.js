@@ -1,6 +1,5 @@
 import { login } from "./auth.js";
 import { showPopup, closePopup } from "./popup.js";
-import { showToast } from "./toast.js";
 
 const setupEventListeners = () => {
     const loginBtn = document.getElementById("loginBtn");
@@ -24,6 +23,17 @@ const setupEventListeners = () => {
         });
     }
 
+    const userLoginForm = document.getElementById('loginForm');
+    if (userLoginForm) {
+        userLoginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            console.log('Form submitted'); // Add this
+            const email = document.querySelector('#loginEmail').value;
+            const password = document.querySelector('#loginPassword').value;
+            await login(email, password);
+        });
+    }
+
     window.addEventListener("click", (event) => {
         if (event.target.classList.contains("popup")) {
             closePopup();
@@ -36,10 +46,13 @@ const setupEventListeners = () => {
         }
     });
 
-    showToast("Welcome to O-BAY!", "success");
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-    document.getElementById('popups').innerHTML = await (await fetch('./components/Popups.html')).text();
-    setupEventListeners();
+    await fetch('./components/Popups.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('popups').innerHTML = html;
+            setupEventListeners(); // Move this here
+        });
 });

@@ -9,7 +9,8 @@ export const login = async (email, password, isAdmin = false) => {
 
     if (account) {
         localStorage.setItem("currentUser", JSON.stringify(account));
-        window.location.assign("products.html");
+        window.location.replace("products.html");
+        showPopup("Welcome Back.", "success")
     } else {
         showToast("Invalid credentials!", "error");
     }
